@@ -121,6 +121,25 @@ public class CustomLinkedList {
 		return value;
 	}
 	
+	/**
+	 * This method will return the size of the elements in the linked list
+	 * @return
+	 */
+	public int size(){
+		if(header==null)
+			return 0;
+		else{
+			int count = 0;
+			Node temp = header;
+			while(temp!=null){
+				++count;
+				temp = temp.getNext();
+			}
+			return count;
+		}
+		
+	}
+	
 
 	@Override
 	public String toString() {
